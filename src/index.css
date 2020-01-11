@@ -1,6 +1,8 @@
 :root {
   --bg-color: #000033;
   --light-color: #f4f4f4;
+  --color-one: #99ffff;
+  --color-two: #00ccff;
 }
 
 * {
@@ -13,4 +15,13 @@ body {
   font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
   background-color: var(--bg-color);
   color: var(--light-color);
+}
+
+a {
+  text-decoration: none;
+  color: var(--color-one);
+}
+
+a:hover {
+  color: var(--color-two);
 }
