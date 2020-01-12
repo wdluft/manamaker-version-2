@@ -14,11 +14,10 @@ const Header = () => {
 export default Header;
 
 const StyledHeader = styled.header`
-  max-width: 1100px;
-  margin: 75px auto 0;
+  margin: 10px auto 10px;
   text-align: center;
   
   h1 {
-    font-size: 5rem;
+    font-size: 3.5rem;
   }
 `;

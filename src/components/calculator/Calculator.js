@@ -29,7 +29,5 @@ export default Calculator
 
 const StyledCalculator = styled.section`
   margin-top: 25px;
-  max-width: 750px;
-  background: var(--color-one);
-  color: var(--dark-color)
+  width: 100%;
 `;

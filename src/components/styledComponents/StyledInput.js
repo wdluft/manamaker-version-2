@@ -1,8 +1,6 @@
 import styled from 'styled-components';
 
 export const Input = styled.input`
-  background: var(--dark-color);
-  color: var(--light-color);
   border: none;
 
   text-align: center;

@@ -17,7 +17,7 @@ export default Nav
 
 
 const StyledNav = styled.nav`
-  font-size: 2rem;
+  font-size: 1.5rem;
 
   ul {
     list-style: none;
