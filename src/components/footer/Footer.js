@@ -13,6 +13,12 @@ const Footer = () => {
 export default Footer
 
 const StyledFooter = styled.footer`
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  margin: 0 auto;
+
   display: flex;
   flex-direction: column;
   justify-content: center;

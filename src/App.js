@@ -3,9 +3,9 @@ import { BrowserRouter as Router, Switch, Route } from 'react-router-dom';
 import styled from 'styled-components'
 
 // Component imports
-import About from './about/About';
-import Header from './header/Header';
-import Footer from './footer/Footer';
+import About from './components/about/About';
+import Header from './components/header/Header';
+import Footer from './components/footer/Footer';
 
 function App() {
   return (
@@ -29,8 +29,6 @@ function App() {
 export default App;
 
 const StyledApp = styled.div`
-  height: 100vh;
-
   display: flex;
   flex-direction: column;
   justify-content: space-between;
