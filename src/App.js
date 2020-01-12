@@ -6,6 +6,7 @@ import styled from 'styled-components'
 import About from './components/about/About';
 import Header from './components/header/Header';
 import Footer from './components/footer/Footer';
+import Calculator from './components/calculator/Calculator';
 
 function App() {
   return (
@@ -17,7 +18,7 @@ function App() {
             <About />
           </Route>
           <Route path='/'>
-            <h1>Hello World</h1>
+            <Calculator />
           </Route>
         </Switch>
         <Footer />
