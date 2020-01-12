@@ -14,13 +14,21 @@ const About = () => {
 export default About;
 
 const StyledAbout = styled.section`
+  height: 100%;
+  margin: 100px 25px 0;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
+
   h1 {
-    font-size: 2.5rem;
+    font-size: 2rem;
     text-align: center;
+    margin-bottom: 20px;
   }
 
   p {
-    font-size: 1.5rem;
-    margin-bottom: 20px;
+    font-size: 1.25rem;
+    margin-bottom: 75px;
   }
 `;
