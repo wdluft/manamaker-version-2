@@ -16,8 +16,9 @@ export default Header;
 const StyledHeader = styled.header`
   margin: 10px auto 10px;
   text-align: center;
+  border-bottom: 5px solid var(--color-one);
   
   h1 {
-    font-size: 3.5rem;
+    font-size: 2.75rem;
   }
 `;

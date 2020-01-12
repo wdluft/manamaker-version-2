@@ -1,11 +1,16 @@
 import React from 'react'
+import styled from 'styled-components';
 
 const LandType = () => {
   return (
-    <div>
+    <StyledP>
       <p>Color Needed: 17</p>
-    </div>
+    </StyledP>
   )
 }
 
 export default LandType
+
+const StyledP = styled.p`
+  font-size: 1.25rem;
+`;

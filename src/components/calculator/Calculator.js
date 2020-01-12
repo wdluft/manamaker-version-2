@@ -3,23 +3,15 @@ import styled from 'styled-components';
 
 // Component imports
 import TotalLandsNeeded from './TotalLandsNeeded';
-import ManaInput from './ManaInput';
-import LandType from './LandType';
+import ManaInputs from './ManaInputs';
+import LandTypes from './LandTypes';
 
 const Calculator = () => {
   return (
     <StyledCalculator>
       <TotalLandsNeeded />
-      <ManaInput />
-      <LandType />
-      <ManaInput />
-      <LandType />
-      <ManaInput />
-      <LandType />
-      <ManaInput />
-      <LandType />
-      <ManaInput />
-      <LandType />
+      <ManaInputs />
+      <LandTypes />
       <button>Reset</button>
     </StyledCalculator>
   )
@@ -28,6 +20,11 @@ const Calculator = () => {
 export default Calculator
 
 const StyledCalculator = styled.section`
-  margin-top: 25px;
   width: 100%;
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+
+  button {
+    grid-column: 1/3;
+  }
 `;
