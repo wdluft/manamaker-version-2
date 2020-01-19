@@ -7,7 +7,7 @@ const TotalLandsNeeded = () => {
   return (
     <StyledDiv>
       <Label htmlFor="landsNeeded">Lands Needed</Label>
-      <Input type="number" name="landsNeeded" id="landsNeeded" min="0" value="0" />
+      <Input type="number" name="landsNeeded" id="landsNeeded" min="0" max='100' value="0" step='1' />
     </StyledDiv>
   )
 }
@@ -20,4 +20,5 @@ const StyledDiv = styled.div`
   display: flex;
   flex-direction: column;
   align-items: center;
+  margin-bottom: 25px;
 `;

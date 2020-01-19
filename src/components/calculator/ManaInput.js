@@ -7,7 +7,7 @@ const ManaInput = () => {
   return (
     <StyledManaInput>
       <Label htmlFor="color">Color</Label>
-      <Input type="number" name="color" id="color" min="0" value="0" />
+      <Input type="number" name="color" id="color" min="0" value="0" step='1' max='150' />
     </StyledManaInput>
   )
 }
