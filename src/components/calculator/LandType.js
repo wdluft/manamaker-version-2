@@ -1,10 +1,10 @@
 import React from 'react'
 import styled from 'styled-components';
 
-const LandType = () => {
+const LandType = ({ manaColor }) => {
   return (
     <StyledP>
-      <p>Color Needed: 17</p>
+      {manaColor.landType} Needed: {manaColor.sourcesNeeded}
     </StyledP>
   )
 }

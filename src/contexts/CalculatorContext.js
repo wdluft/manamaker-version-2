@@ -10,36 +10,36 @@ export default class CalculatorContextProvider extends Component {
         id: 1,
         color: 'white',
         landType: 'Plains',
-        pips: 0,
-        sourcesNeeded: 0
+        pips: 1,
+        sourcesNeeded: 1
       },
       {
         id: 2,
         color: 'blue',
         landType: 'Islands',
-        pips: 0,
-        sourcesNeeded: 0
+        pips: 2,
+        sourcesNeeded: 2
       },
       {
         id: 3,
         color: 'black',
         landType: 'Swamps',
-        pips: 0,
-        sourcesNeeded: 0
+        pips: 3,
+        sourcesNeeded: 3
       },
       {
         id: 4,
         color: 'red',
         landType: 'Mountain',
-        pips: 0,
-        sourcesNeeded: 0
+        pips: 4,
+        sourcesNeeded: 4
       },
       {
         id: 5,
         color: 'green',
         landType: 'Forests',
-        pips: 0,
-        sourcesNeeded: 0
+        pips: 5,
+        sourcesNeeded: 5
       },
     ]
   }

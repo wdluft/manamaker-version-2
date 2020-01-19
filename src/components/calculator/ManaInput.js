@@ -3,11 +3,11 @@ import styled from 'styled-components';
 import { Input } from '../styledComponents/StyledInput';
 import { Label } from '../styledComponents/StyledLabel';
 
-const ManaInput = () => {
+const ManaInput = ({ manaColor }) => {
   return (
     <StyledManaInput>
-      <Label htmlFor="color">Color</Label>
-      <Input type="number" name="color" id="color" min="0" value="0" step='1' max='150' />
+      <Label htmlFor='color'>{manaColor.color}</Label>
+      <Input type="number" name="color" id="color" min="0" value={manaColor.pips} step='1' max='150' />
     </StyledManaInput>
   )
 }

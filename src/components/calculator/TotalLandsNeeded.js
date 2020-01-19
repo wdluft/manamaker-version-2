@@ -3,13 +3,20 @@ import styled from 'styled-components';
 import { Input } from '../styledComponents/StyledInput';
 import { Label } from '../styledComponents/StyledLabel';
 
+import { CalculatorContext } from '../../contexts/CalculatorContext'
+
 const TotalLandsNeeded = () => {
-  return (
-    <StyledDiv>
-      <Label htmlFor="landsNeeded">Lands Needed</Label>
-      <Input type="number" name="landsNeeded" id="landsNeeded" min="0" max='100' value="0" step='1' />
-    </StyledDiv>
-  )
+  return <CalculatorContext.Consumer>
+    {(context) => {
+      const { totalLands } = context;
+      return (
+        <StyledDiv>
+          <Label htmlFor="landsNeeded">Lands Needed</Label>
+          <Input type="number" name="landsNeeded" id="landsNeeded" min="0" max='100' value={totalLands} step='1' />
+        </StyledDiv>
+      )
+    }}
+  </CalculatorContext.Consumer>
 }
 
 export default TotalLandsNeeded
