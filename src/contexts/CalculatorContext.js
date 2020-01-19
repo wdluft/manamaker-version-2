@@ -43,9 +43,55 @@ export default class CalculatorContextProvider extends Component {
       },
     ]
   }
+
+  handleReset = (e) => {
+    e.preventDefault();
+
+    this.setState({
+      landsNeeded: 17,
+      manaColors: [
+        {
+          id: 1,
+          color: 'white',
+          landType: 'Plains',
+          pips: 0,
+          sourcesNeeded: 0
+        },
+        {
+          id: 2,
+          color: 'blue',
+          landType: 'Islands',
+          pips: 0,
+          sourcesNeeded: 0
+        },
+        {
+          id: 3,
+          color: 'black',
+          landType: 'Swamps',
+          pips: 0,
+          sourcesNeeded: 0
+        },
+        {
+          id: 4,
+          color: 'red',
+          landType: 'Mountains',
+          pips: 0,
+          sourcesNeeded: 0
+        },
+        {
+          id: 5,
+          color: 'green',
+          landType: 'Forests',
+          pips: 0,
+          sourcesNeeded: 0
+        }
+      ]
+    });
+  }
+
   render() {
     return (
-      <CalculatorContext.Provider value={{ ...this.state }}>
+      <CalculatorContext.Provider value={{ ...this.state, handleReset: this.handleReset }}>
         {this.props.children}
       </CalculatorContext.Provider>
     )

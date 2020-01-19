@@ -5,6 +5,7 @@ import styled from 'styled-components';
 import TotalLandsNeeded from './TotalLandsNeeded';
 import ManaInputs from './ManaInputs';
 import LandTypes from './LandTypes';
+import ResetButton from './ResetButton';
 import CalculatorContextProvider from '../../contexts/CalculatorContext'
 
 const Calculator = () => {
@@ -14,7 +15,7 @@ const Calculator = () => {
         <TotalLandsNeeded />
         <ManaInputs />
         <LandTypes />
-        <button>Reset</button>
+        <ResetButton />
       </CalculatorContextProvider>
     </StyledCalculator>
   )
