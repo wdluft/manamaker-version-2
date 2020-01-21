@@ -47,6 +47,9 @@ export default class CalculatorContextProvider extends Component {
   handleReset = (e) => {
     e.preventDefault();
 
+    console.log(this.state.manaColors);
+    this.getTotalPips(this.state.manaColors)
+
     this.setState({
       landsNeeded: 17,
       manaColors: [
@@ -87,6 +90,33 @@ export default class CalculatorContextProvider extends Component {
         }
       ]
     });
+  }
+
+  updateLands = e => {
+    let newColors = [...this.state.manaColors];
+
+    // Calculate total pips
+    let totalPips = 0;
+    newColors.forEach(color => {
+      totalPips += Number(color.pips);
+    });
+
+    // Calculate sourcesNeeded
+    newColors.forEach(color => {
+      color.sourcesNeeded = Math.round(
+        (color.pips / totalPips) * e.target.value
+      );
+    });
+
+    this.setState({ totalLands: e.target.value, manaColors: newColors });
+  };
+
+  getTotalPips = (colors) => {
+    const colorPips = colors.map(color => color.pips)
+    const total = colorPips.reduce(
+      (accumulator, currentValue) => accumulator + currentValue,
+      0
+    )
   }
 
   render() {
