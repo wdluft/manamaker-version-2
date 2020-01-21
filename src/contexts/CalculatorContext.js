@@ -10,36 +10,36 @@ export default class CalculatorContextProvider extends Component {
         id: 1,
         color: 'white',
         landType: 'Plains',
-        pips: 10,
-        sourcesNeeded: 1
+        pips: 0,
+        sourcesNeeded: 0
       },
       {
         id: 2,
         color: 'blue',
         landType: 'Islands',
-        pips: 10,
-        sourcesNeeded: 2
+        pips: 0,
+        sourcesNeeded: 0
       },
       {
         id: 3,
         color: 'black',
         landType: 'Swamps',
         pips: 0,
-        sourcesNeeded: 3
+        sourcesNeeded: 0
       },
       {
         id: 4,
         color: 'red',
         landType: 'Mountain',
         pips: 0,
-        sourcesNeeded: 4
+        sourcesNeeded: 0
       },
       {
         id: 5,
         color: 'green',
         landType: 'Forests',
         pips: 0,
-        sourcesNeeded: 5
+        sourcesNeeded: 0
       },
     ]
   }
@@ -106,11 +106,9 @@ export default class CalculatorContextProvider extends Component {
   };
 
   updatePips = e => {
-    console.log(e.target.name);
-    console.log(e.target.value);
     let newColors = this.state.manaColors.map(color => {
       if (color.color === e.target.name) {
-        color.pips = e.target.value;
+        color.pips = Number(e.target.value);
       }
       return color;
     });
