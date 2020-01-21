@@ -105,6 +105,28 @@ export default class CalculatorContextProvider extends Component {
     this.setState({ totalLands: newTotalLands, manaColors: newColors });
   };
 
+  updatePips = e => {
+    console.log(e.target.name);
+    console.log(e.target.value);
+    let newColors = this.state.manaColors.map(color => {
+      if (color.color === e.target.name) {
+        color.pips = e.target.value;
+      }
+      return color;
+    });
+
+    const totalPips = this.getTotalPips(newColors);
+
+    // Calculate sourcesNeeded
+    newColors.forEach(color => {
+      color.sourcesNeeded = this.calculateSourcesNeeded(color.pips, totalPips, this.state.totalLands)
+    });
+
+    this.setState({
+      manaColors: newColors
+    })
+  }
+
   getTotalPips = (colors) => {
     const colorPips = colors.map(color => color.pips)
     return colorPips.reduce(
@@ -119,7 +141,7 @@ export default class CalculatorContextProvider extends Component {
 
   render() {
     return (
-      <CalculatorContext.Provider value={{ ...this.state, handleReset: this.handleReset, updateLands: this.updateLands }}>
+      <CalculatorContext.Provider value={{ ...this.state, handleReset: this.handleReset, updateLands: this.updateLands, updatePips: this.updatePips }}>
         {this.props.children}
       </CalculatorContext.Provider>
     )
