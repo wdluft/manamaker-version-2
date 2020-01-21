@@ -134,7 +134,7 @@ export default class CalculatorContextProvider extends Component {
   }
 
   calculateSourcesNeeded = (colorPips, totalPips, totalLands) => {
-    return Math.floor((colorPips / totalPips) * totalLands)
+    return Math.round((colorPips / totalPips) * totalLands)
   }
 
   render() {
