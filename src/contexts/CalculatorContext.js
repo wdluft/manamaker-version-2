@@ -10,35 +10,35 @@ export default class CalculatorContextProvider extends Component {
         id: 1,
         color: 'white',
         landType: 'Plains',
-        pips: 1,
+        pips: 10,
         sourcesNeeded: 1
       },
       {
         id: 2,
         color: 'blue',
         landType: 'Islands',
-        pips: 2,
+        pips: 10,
         sourcesNeeded: 2
       },
       {
         id: 3,
         color: 'black',
         landType: 'Swamps',
-        pips: 3,
+        pips: 0,
         sourcesNeeded: 3
       },
       {
         id: 4,
         color: 'red',
         landType: 'Mountain',
-        pips: 4,
+        pips: 0,
         sourcesNeeded: 4
       },
       {
         id: 5,
         color: 'green',
         landType: 'Forests',
-        pips: 5,
+        pips: 0,
         sourcesNeeded: 5
       },
     ]
@@ -46,9 +46,6 @@ export default class CalculatorContextProvider extends Component {
 
   handleReset = (e) => {
     e.preventDefault();
-
-    console.log(this.state.manaColors);
-    this.getTotalPips(this.state.manaColors)
 
     this.setState({
       landsNeeded: 17,
@@ -95,33 +92,34 @@ export default class CalculatorContextProvider extends Component {
   updateLands = e => {
     let newColors = [...this.state.manaColors];
 
+    const newTotalLands = e.target.value;
+
     // Calculate total pips
-    let totalPips = 0;
-    newColors.forEach(color => {
-      totalPips += Number(color.pips);
-    });
+    const totalPips = this.getTotalPips(newColors);
 
     // Calculate sourcesNeeded
     newColors.forEach(color => {
-      color.sourcesNeeded = Math.round(
-        (color.pips / totalPips) * e.target.value
-      );
+      color.sourcesNeeded = this.calculateSourcesNeeded(color.pips, totalPips, newTotalLands)
     });
 
-    this.setState({ totalLands: e.target.value, manaColors: newColors });
+    this.setState({ totalLands: newTotalLands, manaColors: newColors });
   };
 
   getTotalPips = (colors) => {
     const colorPips = colors.map(color => color.pips)
-    const total = colorPips.reduce(
+    return colorPips.reduce(
       (accumulator, currentValue) => accumulator + currentValue,
       0
     )
   }
 
+  calculateSourcesNeeded = (colorPips, totalPips, totalLands) => {
+    return Math.floor((colorPips / totalPips) * totalLands)
+  }
+
   render() {
     return (
-      <CalculatorContext.Provider value={{ ...this.state, handleReset: this.handleReset }}>
+      <CalculatorContext.Provider value={{ ...this.state, handleReset: this.handleReset, updateLands: this.updateLands }}>
         {this.props.children}
       </CalculatorContext.Provider>
     )
