@@ -33,4 +33,18 @@ const StyledFooter = styled.footer`
   p {
     font-size: 1rem;
   }
+
+  @media (min-width: 500px) {
+    h1 {
+      font-size: 2rem;
+    }
+
+    p {
+      font-size: 1.75rem;
+    }
+  }
+
+  @media (min-width: 750px) {
+
+  }
 `;
