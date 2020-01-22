@@ -16,9 +16,22 @@ export default Header;
 const StyledHeader = styled.header`
   margin: 10px auto 10px;
   text-align: center;
-  border-bottom: 5px solid var(--color-one);
   
   h1 {
     font-size: 2.75rem;
+  }
+
+  @media (min-width: 500px) {
+    margin: 50px auto 25px;
+
+    h1 {
+      font-size: 4rem;
+    }
+  }
+  
+  @media (min-width: 750px) {
+    h1 {
+      font-size: 5rem;
+    }
   }
 `;

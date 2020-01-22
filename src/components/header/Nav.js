@@ -28,4 +28,12 @@ const StyledNav = styled.nav`
       margin: 0 25px;
     }
   }
+
+  @media (min-width: 500px) {
+    font-size: 2rem;
+  }
+
+  @media (min-width: 750px) {
+    font-size: 2.5rem;
+  }
 `;
