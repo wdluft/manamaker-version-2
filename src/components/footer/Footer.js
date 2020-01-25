@@ -1,16 +1,27 @@
-import React from 'react'
+import React from 'react';
 import styled from 'styled-components';
 
-const Footer = () => {
-  return (
-    <StyledFooter>
-      <h1>Made by <a href="https://willluft" target="_blank" rel="noopener noreferrer">Will Luft</a></h1>
-      <p><a href="https://twitter.com/iamwilldl" target="_blank" rel="noopener noreferrer">Twitter</a></p>
-    </StyledFooter>
-  )
-}
+const Footer = () => (
+  <StyledFooter>
+    <h1>
+      Made by{' '}
+      <a href="https://willluft" target="_blank" rel="noopener noreferrer">
+        Will Luft
+      </a>
+    </h1>
+    <p>
+      <a
+        href="https://twitter.com/iamwilldl"
+        target="_blank"
+        rel="noopener noreferrer"
+      >
+        Twitter
+      </a>
+    </p>
+  </StyledFooter>
+);
 
-export default Footer
+export default Footer;
 
 const StyledFooter = styled.footer`
   position: fixed;
@@ -36,15 +47,14 @@ const StyledFooter = styled.footer`
 
   @media (min-width: 500px) {
     h1 {
-      font-size: 2rem;
+      font-size: 1.75rem;
     }
 
     p {
-      font-size: 1.75rem;
+      font-size: 1.25rem;
     }
   }
 
   @media (min-width: 750px) {
-
   }
 `;

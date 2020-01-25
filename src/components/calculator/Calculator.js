@@ -1,4 +1,4 @@
-import React from 'react'
+import React from 'react';
 import styled from 'styled-components';
 
 // Component imports
@@ -6,22 +6,20 @@ import TotalLandsNeeded from './TotalLandsNeeded';
 import ManaInputs from './ManaInputs';
 import LandTypes from './LandTypes';
 import ResetButton from './ResetButton';
-import CalculatorContextProvider from '../../contexts/CalculatorContext'
+import CalculatorContextProvider from '../../contexts/CalculatorContext';
 
-const Calculator = () => {
-  return (
-    <StyledCalculator>
-      <CalculatorContextProvider>
-        <TotalLandsNeeded />
-        <ManaInputs />
-        <LandTypes />
-        <ResetButton />
-      </CalculatorContextProvider>
-    </StyledCalculator>
-  )
-}
+const Calculator = () => (
+  <StyledCalculator>
+    <CalculatorContextProvider>
+      <TotalLandsNeeded />
+      <ManaInputs />
+      <LandTypes />
+      <ResetButton />
+    </CalculatorContextProvider>
+  </StyledCalculator>
+);
 
-export default Calculator
+export default Calculator;
 
 const StyledCalculator = styled.section`
   width: 100%;
