@@ -40,4 +40,14 @@ const StyledManaInput = styled.div`
   display: flex;
   flex-direction: column;
   align-items: center;
+
+  @media (min-width: 500px) {
+    flex-direction: row;
+    justify-content: space-between;
+    margin: 1rem 0;
+
+    label {
+      margin-right: 1.5rem;
+    }
+  }
 `;

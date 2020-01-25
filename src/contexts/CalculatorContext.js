@@ -31,7 +31,7 @@ export default class CalculatorContextProvider extends Component {
       {
         id: 4,
         color: 'red',
-        landType: 'Mountain',
+        landType: 'Mountains',
         pips: 0,
         sourcesNeeded: 0,
       },

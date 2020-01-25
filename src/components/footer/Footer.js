@@ -30,12 +30,13 @@ const StyledFooter = styled.footer`
   left: 0;
   width: 100%;
   margin: 0 auto;
+  height: 85px;
 
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  margin-bottom: 15px;
+  padding-bottom: 10px;
 
   h1 {
     font-size: 1.25rem;
@@ -54,8 +55,5 @@ const StyledFooter = styled.footer`
     p {
       font-size: 1.25rem;
     }
-  }
-
-  @media (min-width: 750px) {
   }
 `;

@@ -3,7 +3,7 @@ import styled from 'styled-components';
 export const Input = styled.input`
   border: none;
 
-  font-size: 1.25rem;
+  font-size: 1.5rem;
 
   text-align: center;
   padding: 0.15rem 0;
@@ -16,7 +16,7 @@ export const Input = styled.input`
     outline: none;
   }
 
-  @media (min-width: 500px) {
-    font-size: 1.5rem;
+  @media screen and (min-width: 500px) and (orientation: portrait) {
+    font-size: 2.5rem;
   }
 `;
