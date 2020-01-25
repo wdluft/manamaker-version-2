@@ -2,12 +2,11 @@ import React from 'react';
 import styled from 'styled-components';
 import ManaInput from './ManaInput';
 
-import { CalculatorContext } from '../../contexts/CalculatorContext'
+import { CalculatorContext } from '../../contexts/CalculatorContext';
 
-const ManaInputs = () => {
-
-  return <CalculatorContext.Consumer>
-    {(context) => {
+const ManaInputs = () => (
+  <CalculatorContext.Consumer>
+    {context => {
       const { manaColors } = context;
       return (
         <StyledManaInputs>
@@ -15,13 +14,12 @@ const ManaInputs = () => {
             <ManaInput key={manaColor.id} manaColor={manaColor} />
           ))}
         </StyledManaInputs>
-      )
+      );
     }}
   </CalculatorContext.Consumer>
+);
 
-}
-
-export default ManaInputs
+export default ManaInputs;
 
 const StyledManaInputs = styled.div`
   display: flex;

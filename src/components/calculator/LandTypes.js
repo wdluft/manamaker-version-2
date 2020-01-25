@@ -1,13 +1,12 @@
-import React from 'react'
-import LandType from './LandType'
+import React from 'react';
 import styled from 'styled-components';
+import LandType from './LandType';
 
-import { CalculatorContext } from '../../contexts/CalculatorContext'
+import { CalculatorContext } from '../../contexts/CalculatorContext';
 
-const LandTypes = () => {
-
-  return <CalculatorContext.Consumer>
-    {(context) => {
+const LandTypes = () => (
+  <CalculatorContext.Consumer>
+    {context => {
       const { manaColors } = context;
       return (
         <StyledLands>
@@ -15,13 +14,12 @@ const LandTypes = () => {
             <LandType key={color.id} manaColor={color} />
           ))}
         </StyledLands>
-      )
+      );
     }}
   </CalculatorContext.Consumer>
+);
 
-}
-
-export default LandTypes
+export default LandTypes;
 
 const StyledLands = styled.div`
   display: flex;

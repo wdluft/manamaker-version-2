@@ -25,12 +25,13 @@ const StyledCalculator = styled.section`
   max-width: 750px;
   display: grid;
   grid-template-columns: repeat(2, 1fr);
+  grid-gap: 1rem;
 
   button {
     grid-column: 1/3;
     margin: 2rem auto 0;
     width: 50%;
-    padding: 0.75rem;
+    padding: 0.5rem;
     font-size: 1.25rem;
   }
 `;

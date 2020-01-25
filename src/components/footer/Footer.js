@@ -24,6 +24,7 @@ const Footer = () => (
 export default Footer;
 
 const StyledFooter = styled.footer`
+  background-color: var(--dark-color);
   position: fixed;
   bottom: 0;
   left: 0;
