@@ -22,7 +22,7 @@ const Calculator = () => (
 export default Calculator;
 
 const StyledCalculator = styled.section`
-  width: 100%;
+  max-width: 750px;
   display: grid;
   grid-template-columns: repeat(2, 1fr);
 

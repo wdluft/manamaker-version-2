@@ -6,7 +6,6 @@ export const Input = styled.input`
   font-size: 1.25rem;
 
   text-align: center;
-  width: 50%;
   padding: 0.15rem 0;
 
   &:active {
@@ -15,5 +14,9 @@ export const Input = styled.input`
 
   &:focus {
     outline: none;
+  }
+
+  @media (min-width: 500px) {
+    font-size: 1.5rem;
   }
 `;
