@@ -50,4 +50,8 @@ const StyledManaInput = styled.div`
       margin-right: 1.5rem;
     }
   }
+
+  @media screen and (min-width: 500px) and (orientation: landscape) {
+    margin-right: 3rem;
+  }
 `;

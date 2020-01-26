@@ -30,15 +30,15 @@ const StyledCalculator = styled.section`
 
   button {
     grid-column: 1/3;
-    margin: 2rem auto 0;
-    width: 50%;
+    margin: 1rem auto 0;
+    width: 33%;
     padding: 0.5rem;
     font-size: 1.5rem;
   }
 
   @media (min-width: 500px) {
     button {
-      font-size: 2rem;
+      font-size: 1.5rem;
     }
   }
 `;

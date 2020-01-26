@@ -20,4 +20,9 @@ const StyledP = styled.p`
   @media screen and (min-width: 500px) and (orientation: portrait) {
     font-size: 2.5rem;
   }
+
+  @media screen and (min-width: 500px) and (orientation: landscape) {
+    font-size: 2rem;
+    margin-left: 3rem;
+  }
 `;

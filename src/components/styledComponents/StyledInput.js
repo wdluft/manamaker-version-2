@@ -13,10 +13,14 @@ export const Input = styled.input`
   }
 
   &:focus {
-    outline: none;
+    outline: 3px solid var(--color-one);
   }
 
   @media screen and (min-width: 500px) and (orientation: portrait) {
     font-size: 2.5rem;
+  }
+
+  @media screen and (min-width: 500px) and (orientation: landscape) {
+    font-size: 2rem;
   }
 `;
