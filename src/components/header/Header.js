@@ -17,6 +17,9 @@ const StyledHeader = styled.header`
 
   h1 {
     font-size: 2.75rem;
+    font-family: var(--header-font);
+    font-weight: normal;
+    letter-spacing: 0.25rem;
   }
 
   @media (min-width: 500px) {

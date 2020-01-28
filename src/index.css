@@ -1,8 +1,12 @@
+@import url('https://fonts.googleapis.com/css?family=Alfa+Slab+One|Crimson+Text&display=swap');
+
 :root {
   --dark-color: #000033;
   --light-color: #f4f4f4;
   --color-one: #99ffff;
   --color-two: #00ccff;
+  --header-font: 'Alfa Slab One', cursive;
+  --body-font: 'Crimson Text', serif;
 }
 
 * {
@@ -12,7 +16,7 @@
 }
 
 body {
-  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  font-family: var(--body-font);
   background-color: var(--dark-color);
   color: var(--light-color);
   height: 100%;
