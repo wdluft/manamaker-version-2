@@ -1,6 +1,6 @@
 import React from 'react';
 import { BrowserRouter as Router, Switch, Route } from 'react-router-dom';
-import styled from 'styled-components'
+import styled from 'styled-components';
 
 // Component imports
 import About from './components/about/About';
@@ -14,10 +14,10 @@ function App() {
       <StyledApp>
         <Header />
         <Switch>
-          <Route path='/about'>
+          <Route path="/about">
             <About />
           </Route>
-          <Route path='/'>
+          <Route path="/">
             <Calculator />
           </Route>
         </Switch>
