@@ -1,23 +1,19 @@
-import React from 'react';
+import React, { useContext } from 'react';
 import styled from 'styled-components';
 import ManaInput from './ManaInput';
 
 import { CalculatorContext } from '../../contexts/CalculatorContext';
 
-const ManaInputs = () => (
-  <CalculatorContext.Consumer>
-    {context => {
-      const { manaColors } = context;
-      return (
-        <StyledManaInputs>
-          {manaColors.map(manaColor => (
-            <ManaInput key={manaColor.id} manaColor={manaColor} />
-          ))}
-        </StyledManaInputs>
-      );
-    }}
-  </CalculatorContext.Consumer>
-);
+const ManaInputs = () => {
+  const { manaColors } = useContext(CalculatorContext);
+  return (
+    <StyledManaInputs>
+      {manaColors.map(manaColor => (
+        <ManaInput key={manaColor.id} manaColor={manaColor} />
+      ))}
+    </StyledManaInputs>
+  );
+};
 
 export default ManaInputs;
 
