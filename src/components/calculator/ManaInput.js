@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useContext } from 'react';
 import styled from 'styled-components';
 import PropTypes from 'prop-types';
 import { Input } from '../styledComponents/StyledInput';
@@ -6,29 +6,25 @@ import { Label } from '../styledComponents/StyledLabel';
 
 import { CalculatorContext } from '../../contexts/CalculatorContext';
 
-const ManaInput = ({ manaColor }) => (
-  <CalculatorContext.Consumer>
-    {context => {
-      const { updatePips } = context;
+const ManaInput = ({ manaColor }) => {
+  const { updatePips } = useContext(CalculatorContext);
 
-      return (
-        <StyledManaInput>
-          <Label htmlFor={manaColor.color}>{manaColor.color}</Label>
-          <Input
-            type="number"
-            name={manaColor.color}
-            id="color"
-            min="0"
-            value={manaColor.pips}
-            step="1"
-            max="150"
-            onChange={updatePips}
-          />
-        </StyledManaInput>
-      );
-    }}
-  </CalculatorContext.Consumer>
-);
+  return (
+    <StyledManaInput>
+      <Label htmlFor={manaColor.color}>{manaColor.color}</Label>
+      <Input
+        type="number"
+        name={manaColor.color}
+        id="color"
+        min="0"
+        value={manaColor.pips}
+        step="1"
+        max="150"
+        onChange={updatePips}
+      />
+    </StyledManaInput>
+  );
+};
 
 export default ManaInput;
 
