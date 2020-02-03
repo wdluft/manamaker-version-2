@@ -49,7 +49,7 @@ export default class CalculatorContextProvider extends Component {
     e.preventDefault();
 
     this.setState({
-      landsNeeded: 17,
+      totalLands: 17,
       manaColors: [
         {
           id: 1,
