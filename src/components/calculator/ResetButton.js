@@ -1,18 +1,14 @@
-import React from 'react';
+import React, { useContext } from 'react';
 
 import { CalculatorContext } from '../../contexts/CalculatorContext';
 
-const ResetButton = () => (
-  <CalculatorContext.Consumer>
-    {context => {
-      const { handleReset } = context;
-      return (
-        <button type="button" onClick={handleReset}>
-          Reset
-        </button>
-      );
-    }}
-  </CalculatorContext.Consumer>
-);
+const ResetButton = () => {
+  const { handleReset } = useContext(CalculatorContext);
+  return (
+    <button type="button" onClick={handleReset}>
+      Reset
+    </button>
+  );
+};
 
 export default ResetButton;
