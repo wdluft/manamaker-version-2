@@ -34,6 +34,13 @@ const StyledCalculator = styled.section`
     width: 33%;
     padding: 0.5rem;
     font-size: 1.5rem;
+    background: #ccc;
+    box-shadow: inset 0 1px 0 #ffffff, 0 2px 2px #444444;
+
+    &:focus {
+      box-shadow: inset 0 1px 0 #ffffff;
+      outline: none;
+    }
   }
 
   @media (min-width: 500px) {
