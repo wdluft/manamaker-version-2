@@ -7,13 +7,17 @@ export const Input = styled.input`
 
   text-align: center;
   padding: 0.15rem 0;
+  background-color: #ccc;
+
+  box-shadow: 0 3px 0 #ffffff, inset 0 2px 2px #444444;
 
   &:active {
     border: none;
   }
 
   &:focus {
-    outline: 3px solid var(--color-one);
+    outline: none;
+    box-shadow: 0 3px 0 var(--color-one), inset 0 2px 2px #444444;
   }
 
   @media screen and (min-width: 500px) and (orientation: portrait) {

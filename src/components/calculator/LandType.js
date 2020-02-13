@@ -4,7 +4,7 @@ import PropTypes from 'prop-types';
 
 const LandType = ({ manaColor }) => (
   <StyledP>
-    {manaColor.landType}: {manaColor.sourcesNeeded}
+    {manaColor.sourcesNeeded} {manaColor.landType}
   </StyledP>
 );
 
