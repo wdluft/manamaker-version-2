@@ -1,40 +1,18 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
-import styled from 'styled-components';
+import { NavWrapper } from '../elements/HeaderStyles';
 
 const Nav = () => (
-  <StyledNav>
-    <ul>
-      <li>
+  <NavWrapper className="nav">
+    <ul className="nav__links">
+      <li className="nav__link">
         <Link to="/">Home</Link>
       </li>
-      <li>
+      <li className="nav__link">
         <Link to="/about">About</Link>
       </li>
     </ul>
-  </StyledNav>
+  </NavWrapper>
 );
 
 export default Nav;
-
-const StyledNav = styled.nav`
-  font-size: 1.25rem;
-
-  ul {
-    list-style: none;
-    display: flex;
-    justify-content: center;
-
-    li {
-      margin: 0 25px;
-    }
-  }
-
-  @media (min-width: 500px) {
-    font-size: 1.75rem;
-  }
-
-  @media (min-width: 750px) {
-    font-size: 2rem;
-  }
-`;
