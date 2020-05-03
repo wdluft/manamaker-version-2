@@ -35,5 +35,5 @@ export const LandTypesWrapper = styled.div`
   display: flex;
   flex-direction: column;
   justify-content: space-around;
-  align-content: center;
+  align-items: flex-end;
 `;
