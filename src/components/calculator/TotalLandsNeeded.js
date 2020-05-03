@@ -1,14 +1,14 @@
 import React, { useContext } from 'react';
-import styled from 'styled-components';
-import { Input } from '../styledComponents/StyledInput';
-import { Label } from '../styledComponents/StyledLabel';
+import { Input } from '../elements/Input';
+import { Label } from '../elements/Label';
+import { LandsNeededWrapper } from '../elements/CalculatorStyles';
 
 import { CalculatorContext } from '../../contexts/CalculatorContext';
 
 const TotalLandsNeeded = () => {
   const { totalLands, updateLands } = useContext(CalculatorContext);
   return (
-    <StyledDiv>
+    <LandsNeededWrapper>
       <Label htmlFor="landsNeeded">Lands Needed</Label>
       <Input
         type="number"
@@ -20,16 +20,8 @@ const TotalLandsNeeded = () => {
         step="1"
         onChange={updateLands}
       />
-    </StyledDiv>
+    </LandsNeededWrapper>
   );
 };
 
 export default TotalLandsNeeded;
-
-const StyledDiv = styled.div`
-  grid-column: 1/3;
-
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-`;

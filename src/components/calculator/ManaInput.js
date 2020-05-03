@@ -1,8 +1,8 @@
 import React, { useContext } from 'react';
-import styled from 'styled-components';
 import PropTypes from 'prop-types';
-import { Input } from '../styledComponents/StyledInput';
-import { Label } from '../styledComponents/StyledLabel';
+import { Input } from '../elements/Input';
+import { Label } from '../elements/Label';
+import { ManaInputWrapper } from '../elements/CalculatorStyles';
 
 import { CalculatorContext } from '../../contexts/CalculatorContext';
 
@@ -10,7 +10,7 @@ const ManaInput = ({ manaColor }) => {
   const { updatePips } = useContext(CalculatorContext);
 
   return (
-    <StyledManaInput>
+    <ManaInputWrapper>
       <Label htmlFor={manaColor.color}>{manaColor.color}</Label>
       <Input
         type="number"
@@ -22,32 +22,12 @@ const ManaInput = ({ manaColor }) => {
         max="150"
         onChange={updatePips}
       />
-    </StyledManaInput>
+    </ManaInputWrapper>
   );
 };
-
-export default ManaInput;
 
 ManaInput.propTypes = {
   manaColor: PropTypes.object.isRequired,
 };
 
-const StyledManaInput = styled.div`
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-
-  @media (min-width: 500px) {
-    flex-direction: row;
-    justify-content: space-between;
-    margin: 1rem 0;
-
-    label {
-      margin-right: 1.5rem;
-    }
-  }
-
-  @media screen and (min-width: 500px) and (orientation: landscape) {
-    margin-right: 3rem;
-  }
-`;
+export default ManaInput;

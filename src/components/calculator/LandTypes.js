@@ -1,25 +1,18 @@
 import React, { useContext } from 'react';
-import styled from 'styled-components';
 import LandType from './LandType';
+import { LandTypesWrapper } from '../elements/CalculatorStyles';
 
 import { CalculatorContext } from '../../contexts/CalculatorContext';
 
 const LandTypes = () => {
   const { manaColors } = useContext(CalculatorContext);
   return (
-    <StyledLands>
+    <LandTypesWrapper>
       {manaColors.map(color => (
         <LandType key={color.id} manaColor={color} />
       ))}
-    </StyledLands>
+    </LandTypesWrapper>
   );
 };
 
 export default LandTypes;
-
-const StyledLands = styled.div`
-  display: flex;
-  flex-direction: column;
-  justify-content: space-around;
-  align-content: center;
-`;

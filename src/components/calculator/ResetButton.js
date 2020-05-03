@@ -1,13 +1,13 @@
 import React, { useContext } from 'react';
-
+import { Button } from '../elements/Button';
 import { CalculatorContext } from '../../contexts/CalculatorContext';
 
 const ResetButton = () => {
   const { handleReset } = useContext(CalculatorContext);
   return (
-    <button type="button" onClick={handleReset}>
+    <Button type="button" onClick={handleReset}>
       Reset
-    </button>
+    </Button>
   );
 };
 
