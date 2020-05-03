@@ -1,12 +1,38 @@
-@import url('https://fonts.googleapis.com/css?family=Alfa+Slab+One|Crimson+Text&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Muli:wght@400;700&display=swap');
 
 :root {
-  --dark-color: #000033;
-  --light-color: #f4f4f4;
-  --color-one: #99ffff;
-  --color-two: #00ccff;
-  --header-font: 'Alfa Slab One', cursive;
-  --body-font: 'Crimson Text', serif;
+  --purple: #7f5af0;
+  --lightPurp: #a48af4;
+  --darkPurp: #5c2dec;
+  --green: #2cb67d;
+  --gray: #72757e;
+  --black: #010101;
+  --white: #fffffe;
+  --darkGray: #16161a;
+  --lightGray: #94a1b2;
+
+  --bgColor: var(--darkGray);
+  --headingColor: var(--white);
+  --textColor: var(--lightGray);
+  --lineColor: var(--black);
+  --linkColor: var(--purple);
+  --linkHoverColor: var(--lightPurp);
+  --linkActiveColor: var(--darkPurp);
+
+  /* Typography */
+  --headingFont: 'Muli', sans-serif;
+  --bodyFont: 'Muli', sans-serif;
+
+  --heading1: 4.209rem;
+  --heading2: 3.157rem;
+  --heading3: 2.369rem;
+  --heading4: 1.777rem;
+  --heading5: 1.333rem;
+  --heading6: 1rem;
+  --baseText: 1rem;
+  --smallText: 0.75rem;
+
+  --lineHeight: 1.65;
 }
 
 * {
@@ -16,18 +42,51 @@
 }
 
 body {
-  font-family: var(--body-font);
-  background-color: var(--dark-color);
-  color: var(--light-color);
+  font-family: var(--bodyFont);
+  background-color: var(--bgColor);
+  color: var(--textColor);
   height: 100%;
-  line-height: 1.5;
+  line-height: var(--lineHeight);
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  color: var(--headingColor);
+  font-weight: bold;
+}
+
+h1 {
+  font-size: var(--heading1);
+}
+h2 {
+  font-size: var(--heading2);
+}
+h3 {
+  font-size: var(--heading3);
+}
+h4 {
+  font-size: var(--heading4);
+}
+h5 {
+  font-size: var(--heading5);
+}
+h6 {
+  font-size: var(--heading6);
 }
 
 a {
   text-decoration: none;
-  color: var(--color-one);
+  color: var(--linkColor);
 }
 
 a:hover {
-  color: var(--color-two);
+  color: var(--linkHoverColor);
+}
+
+a:active {
+  color: var(--linkActiveColor);
 }
