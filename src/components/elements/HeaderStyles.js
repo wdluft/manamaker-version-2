@@ -11,6 +11,12 @@ export const HeaderWrapper = styled.header`
   .header__title {
     font-size: var(--heading2);
   }
+
+  @media (min-width: 640px) {
+    .header__title {
+      font-size: var(--heading1);
+    }
+  }
 `;
 
 export const NavWrapper = styled.nav`
@@ -18,10 +24,16 @@ export const NavWrapper = styled.nav`
     list-style: none;
     display: flex;
     justify-content: center;
+  }
 
+  .nav__link {
+    margin: 0 18px;
+    font-size: var(--heading5);
+  }
+
+  @media (min-width: 640px) {
     .nav__link {
-      margin: 0 18px;
-      font-size: var(--heading5);
+      font-size: var(--heading4);
     }
   }
 `;
