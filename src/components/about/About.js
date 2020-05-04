@@ -3,7 +3,7 @@ import styled from 'styled-components';
 
 const About = () => (
   <StyledAbout>
-    <h1>About ManaMaker</h1>
+    <h3>About ManaMaker</h3>
     <p>
       A simple calculator to help figure out how many basic lands of each color
       to run in your deck. Made primarily with limited in mind.
@@ -22,14 +22,13 @@ const StyledAbout = styled.section`
   justify-content: space-between;
   align-items: center;
 
-  h1 {
-    font-size: 2rem;
-    text-align: center;
+  h3 {
     margin-bottom: 20px;
+    text-align: center;
   }
 
   p {
-    font-size: 1.25rem;
+    text-align: center;
     margin-bottom: 75px;
   }
 `;

@@ -6,7 +6,7 @@ import { CalculatorContext } from '../../contexts/CalculatorContext';
 const ManaInputs = () => {
   const { manaColors } = useContext(CalculatorContext);
   return (
-    <ManaInputsWrapper>
+    <ManaInputsWrapper className="manaGroups">
       {manaColors.map(manaColor => (
         <ManaInput key={manaColor.id} manaColor={manaColor} />
       ))}
