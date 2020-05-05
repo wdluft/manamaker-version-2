@@ -16,6 +16,7 @@ export default About;
 
 const StyledAbout = styled.section`
   height: 100%;
+  max-width: 768px;
   margin: 100px 25px 0;
   display: flex;
   flex-direction: column;
