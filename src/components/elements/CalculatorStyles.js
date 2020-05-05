@@ -1,7 +1,7 @@
 import styled from 'styled-components';
 
 export const CalculatorWrapper = styled.section`
-  padding: 0 1rem;
+  padding: 0 1rem 1rem;
   width: 100%;
   max-width: 768px;
   display: grid;
