@@ -59,11 +59,14 @@ export const ManaInputWrapper = styled.div`
 
   .manaGroup__sources {
     color: var(--white);
-    font-size: var(--heading5);
     padding-bottom: 5px;
   }
 
   @media (min-width: 640px) {
     padding-bottom: 1rem;
+
+    .manaGroup__sources {
+      font-size: var(--heading5);
+    }
   }
 `;
