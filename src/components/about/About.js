@@ -8,7 +8,7 @@ const About = () => (
       A simple calculator to help figure out how many basic lands of each color
       to run in your deck. Made primarily with limited in mind.
     </p>
-    <p>Version 2.0</p>
+    <p>Version 2.1</p>
   </StyledAbout>
 );
 
