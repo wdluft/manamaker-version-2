@@ -12,7 +12,7 @@ export const HeaderWrapper = styled.header`
     font-size: var(--heading2);
   }
 
-  @media (min-width: 640px) {
+  @media (min-width: 768px) {
     .header__title {
       font-size: var(--heading1);
     }
@@ -31,7 +31,7 @@ export const NavWrapper = styled.nav`
     font-size: var(--heading5);
   }
 
-  @media (min-width: 640px) {
+  @media (min-width: 768px) {
     .nav__link {
       font-size: var(--heading4);
     }

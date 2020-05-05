@@ -6,7 +6,7 @@ export const Button = styled.button`
   font-size: var(--bodyText);
   background: var(--purple);
   color: var(--white);
-  border: none;
+  border: 3px solid var(--black);
 
   &:hover {
     background: var(--lightPurp);
@@ -14,5 +14,14 @@ export const Button = styled.button`
 
   &:active {
     background: var(--darkPurp);
+  }
+
+  &:focus {
+    border-color: var(--green);
+    outline: none;
+  }
+
+  @media (min-width: 640px) {
+    font-size: var(--heading5);
   }
 `;

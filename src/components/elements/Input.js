@@ -17,4 +17,12 @@ export const Input = styled.input`
   &:focus {
     border-color: var(--green);
   }
+
+  &:focus {
+    outline: none;
+  }
+
+  @media (min-width: 640px) {
+    font-size: var(--heading5);
+  }
 `;

@@ -1,7 +1,7 @@
 import styled from 'styled-components';
 
 export const FooterWrapper = styled.footer`
-  background-color: var(--dark-color);
+  background-color: var(--bgColor);
   position: fixed;
   bottom: 0;
   left: 0;
@@ -16,6 +16,6 @@ export const FooterWrapper = styled.footer`
   padding-bottom: 10px;
 
   .footer__title {
-    border-bottom: 3px solid var(--black);
+    line-height: var(--lineHeight);
   }
 `;
