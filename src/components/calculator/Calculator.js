@@ -8,7 +8,13 @@ import { CalculatorWrapper } from '../elements/CalculatorStyles';
 import CalculatorContextProvider from '../../contexts/CalculatorContext';
 
 const Calculator = () => (
-  <CalculatorWrapper className="calculator">
+  <CalculatorWrapper
+    className="calculator"
+    initial={{ x: '-100%' }}
+    animate={{ x: 0 }}
+    exit={{ opacity: '-100%' }}
+    transition={{ damping: 300, duration: 0.5 }}
+  >
     <CalculatorContextProvider>
       <TotalLandsNeeded />
       <ManaInputs />

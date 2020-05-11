@@ -1,6 +1,7 @@
 import React from 'react';
 import { BrowserRouter as Router, Switch, Route } from 'react-router-dom';
 import styled from 'styled-components';
+import { AnimatePresence } from 'framer-motion';
 
 // Component imports
 import About from './components/about/About';
@@ -13,14 +14,16 @@ function App() {
     <Router>
       <StyledApp>
         <Header />
-        <Switch>
-          <Route path="/about">
-            <About />
-          </Route>
-          <Route path="/">
-            <Calculator />
-          </Route>
-        </Switch>
+        <AnimatePresence exitBeforeEnter>
+          <Switch>
+            <Route path="/about">
+              <About />
+            </Route>
+            <Route path="/">
+              <Calculator />
+            </Route>
+          </Switch>
+        </AnimatePresence>
         <Footer />
       </StyledApp>
     </Router>

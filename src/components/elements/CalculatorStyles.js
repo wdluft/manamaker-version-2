@@ -1,6 +1,7 @@
 import styled from 'styled-components';
+import { motion } from 'framer-motion';
 
-export const CalculatorWrapper = styled.section`
+export const CalculatorWrapper = styled(motion.section)`
   padding: 0 1rem 1rem;
   width: 100%;
   max-width: 768px;

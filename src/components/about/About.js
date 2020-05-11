@@ -1,20 +1,26 @@
 import React from 'react';
 import styled from 'styled-components';
+import { motion } from 'framer-motion';
 
 const About = () => (
-  <StyledAbout>
+  <AboutWrapper
+    initial={{ x: '100%' }}
+    animate={{ x: 0 }}
+    exit={{ x: '100%' }}
+    transition={{ damping: 300, duration: 0.5 }}
+  >
     <h3>About ManaMaker</h3>
     <p>
       A simple calculator to help figure out how many basic lands of each color
       to run in your deck. Made primarily with limited in mind.
     </p>
     <p>Version 2.1</p>
-  </StyledAbout>
+  </AboutWrapper>
 );
 
 export default About;
 
-const StyledAbout = styled.section`
+const AboutWrapper = styled(motion.section)`
   height: 100%;
   max-width: 768px;
   margin: 100px 25px 0;
