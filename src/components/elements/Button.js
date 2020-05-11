@@ -1,6 +1,7 @@
 import styled from 'styled-components';
+import { motion } from 'framer-motion';
 
-export const Button = styled.button`
+export const Button = styled(motion.button)`
   padding: 0.25rem 2.5rem;
   border-radius: 23px;
   font-size: var(--bodyText);

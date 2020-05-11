@@ -5,7 +5,7 @@ import { CalculatorContext } from '../../contexts/CalculatorContext';
 const ResetButton = () => {
   const { handleReset } = useContext(CalculatorContext);
   return (
-    <Button type="button" onClick={handleReset}>
+    <Button type="button" onClick={handleReset} whileTap={{ scale: 0.95 }}>
       Reset
     </Button>
   );
