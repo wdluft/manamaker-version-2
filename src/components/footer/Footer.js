@@ -5,7 +5,7 @@ const Footer = () => (
   <FooterWrapper>
     <h6 className="footer__title">
       Made by{' '}
-      <a href="https://willluft" target="_blank" rel="noopener noreferrer">
+      <a href="https://willluft.com" rel="noopener noreferrer">
         Will Luft
       </a>
     </h6>
@@ -13,7 +13,6 @@ const Footer = () => (
       <a
         className="footer_twitterLink"
         href="https://twitter.com/iamwilldl"
-        target="_blank"
         rel="noopener noreferrer"
       >
         Twitter
